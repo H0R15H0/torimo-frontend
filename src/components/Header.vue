@@ -2,7 +2,7 @@
   <header>
     <VAppBar app elevate-on-scroll color="primary">
       <VToolbarTitle>
-        <VBtn @click="moveToTop()" x-large depressed color="primary black--text">Torimo</VBtn>
+        <VBtn @click="moveToTop()" x-large depressed color="primary black--text">Trimo</VBtn>
       </VToolbarTitle>
 
       <VSpacer></VSpacer>
