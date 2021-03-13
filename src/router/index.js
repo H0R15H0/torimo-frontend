@@ -17,6 +17,10 @@ const routes = [
     component: ShowTrip
   },
   {
+    path: '/trips/new',
+    name: 'CreateTrip'
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
