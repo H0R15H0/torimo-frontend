@@ -22,7 +22,7 @@
 export default {
 	methods: {
     moveToTop() {
-      this.$router.push({name: 'Home'}, () => {})
+      this.$router.push({name: 'Top'}, () => {})
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
