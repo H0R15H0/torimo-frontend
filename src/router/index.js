@@ -12,7 +12,7 @@ const routes = [
     component: Top
   },
   {
-    path: '/trips',
+    path: '/trips/:id',
     name: 'ShowTrip',
     component: ShowTrip
   },
