@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Top from '../views/Top.vue'
 import ShowTrip from '../views/ShowTrip.vue'
+import SearchTrips from '../views/SearchTrips'
 
 Vue.use(VueRouter)
 
@@ -17,21 +18,14 @@ const routes = [
     component: ShowTrip
   },
   {
-    path: 'search_trips',
-    name: 'SearchTrip'
+    path: '/search_trips',
+    name: 'SearchTrips',
+    component: SearchTrips,
   },
   {
     path: '/trips/new',
     name: 'CreateTrip'
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
 ]
 
 const router = new VueRouter({
