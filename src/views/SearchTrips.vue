@@ -24,7 +24,6 @@ export default {
   methods: {
     searchTrips() {
       axios.get(`https://torimo.herokuapp.com/api/v1/search_trips?${this.q}`).then( resp => {
-        // console.log(resp.data.trips);
         this.trips = []
         resp.data.trips.forEach(trip => {
           this.trips.push(new Trip(trip))
