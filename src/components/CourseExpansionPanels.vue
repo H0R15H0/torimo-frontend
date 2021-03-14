@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
     <VExpansionPanels v-model="panel" multiple class="pa-3">
-      <div class="top-area">
+      <div class="top-area mt-2 v-block">
         <div class="text-area">
-          <VIcon>mdi-car</VIcon>
-          {{trip.title}}
+          <!-- <VIcon>mdi-car</VIcon> -->
+          <h3>{{trip.title}}</h3>
         </div>
         <div class="money-area">
           <VIcon small>mdi-bitcoin</VIcon>
