@@ -1,12 +1,15 @@
 <template>
-    <div class="CreateTrip">
-        <div class="main-title"><h1>投稿フォーム</h1></div>
+    <div class="CreateTrip mb-16">
+        <div class="main-title accent--text">
+          <h1>投稿フォーム</h1>
+        </div>
         <div class="input-header">
             <VTextField
             label="旅のタイトル"
             :rules="rules"
             hide-details="auto"
             ></VTextField>
+
             <v-autocomplete
             ref="country"
             v-model="country"
@@ -16,13 +19,14 @@
             placeholder="旅行先"
             required
             ></v-autocomplete>
+            
             <v-slider
             class="cost-slider"
             v-model="value"
             :thumb-size="52"
-            step="10000"
+            step="2000"
             min="0"
-            max="100000"
+            max="50000"
             label="費用(円)"
             thumb-label="always"
             ticks
@@ -39,7 +43,7 @@
       <VCol cols="12"><VTextField label="何箇所目か？" v-model="params.trip.trip_courses[0].index_in_course"></VTextField></VCol>      
       <VCol cols="12"><VTextField label="交通手段ID" v-model="params.trip.trip_courses[0].transportation_to_next_id"></VTextField></VCol>      
     </VRow>
-    <VBtn @click="submit">submit</VBtn>
+    <VBtn @click="submit" color="accent" class="mt-5">submit</VBtn>
   </VContainer>
         
     </div>
@@ -93,8 +97,8 @@ export default {
 <style>
 .main-title h1 {
     text-align: left;
-    font-size: 40px;
-    margin: 40px 0 35px 20px;
+    font-size: 30px;
+    margin: 40px 0 25px 20px;
 }
 .input-header {
     width: 90%;
