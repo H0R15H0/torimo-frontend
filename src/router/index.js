@@ -13,6 +13,11 @@ const routes = [
     component: Top
   },
   {
+    path: '/trips/new',
+    name: 'CreateTrip',
+    component: CreateTrip
+  },
+  {
     path: '/trips/:id',
     name: 'ShowTrip',
     component: ShowTrip
