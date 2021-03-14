@@ -33,17 +33,19 @@
             ></v-slider>
         </div>
         <VContainer>
-    <VRow>
-      <!-- <VCol cols="12"><VTextField label="旅のタイトル" v-model="params.trip.title"></VTextField></VCol>
-      <VCol cols="12"><VTextField label="旅行先" v-model="params.trip.main_place"></VTextField></VCol>
-      <VCol cols="12"><VTextField label="予算" v-model="params.trip.budget"></VTextField></VCol> -->
-      <VCol cols="12"><VTextField label="場所" v-model="params.trip.palce"></VTextField></VCol>
-      <VCol cols="12"><VTextField label="到着時刻" v-model="params.trip.trip_courses[0].arrival_time"></VTextField></VCol>
-      <VCol cols="12"><VTextField label="何日目か" v-model="params.trip.trip_courses[0].day_of_trip"></VTextField></VCol>
-      <VCol cols="12"><VTextField label="何箇所目か？" v-model="params.trip.trip_courses[0].index_in_course"></VTextField></VCol>      
-      <VCol cols="12"><VTextField label="交通手段ID" v-model="params.trip.trip_courses[0].transportation_to_next_id"></VTextField></VCol>      
-    </VRow>
-    <VBtn @click="submit" color="accent" class="mt-5">submit</VBtn>
+    <v-card>
+      <div class="day-form pl-4 accent--text font-weight-bold">1日目</div>
+      <VRow class="ma-3 day-form-inputs">
+        <!-- <VCol cols="12"><VTextField label="旅のタイトル" v-model="params.trip.title"></VTextField></VCol>
+        <VCol cols="12"><VTextField label="旅行先" v-model="params.trip.main_place"></VTextField></VCol>
+        <VCol cols="12"><VTextField label="予算" v-model="params.trip.budget"></VTextField></VCol> -->
+        <VCol cols="12"><VTextField label="場所" v-model="params.trip.palce"></VTextField></VCol>
+        <VCol cols="12"><VTextField label="10:00" v-model="params.trip.trip_courses[0].arrival_time"></VTextField></VCol>
+        <VCol cols="12"><VTextField label="バス" v-model="params.trip.trip_courses[0].transportation_to_next_id"></VTextField></VCol>      
+        
+      </VRow>
+    </v-card>
+    <VBtn @click="submit" color="accent" class="mt-5" large>投稿</VBtn>
   </VContainer>
         
     </div>
@@ -106,5 +108,14 @@ export default {
 }
 .cost-slider {
     margin-top: 60px;
+}
+.day-form {
+  background-color: #f5cf47;
+  height: 50px;
+  text-align: left;
+  line-height: 50px;
+}
+.day-form-inputs * {
+  margin: 0px;
 }
 </style>
