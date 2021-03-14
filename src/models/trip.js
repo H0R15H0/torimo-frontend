@@ -29,8 +29,13 @@ export default class Trip {
     let tripCourses = groupedCourses.map((dayCourses) => {
       let courses = []
       dayCourses.forEach((course) => {
-        courses.push(course)
-        if (course.transportation_to_next) {courses.push(course.transportation_to_next)}
+        if (course.transportation_to_next) {
+          courses.push(course)
+          courses.push({name: course.transportation_to_next.name})
+        }
+        else {
+          courses.push(course)
+        }
       })
       return courses
       // tripCourses.push(courses)
