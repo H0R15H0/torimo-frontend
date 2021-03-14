@@ -8,7 +8,7 @@ export default class Trip {
   }
 
   fetch(id){
-    axios.get(`http://localhost:3000/api/v1/trips/${id}`).then( resp => {
+    axios.get(`https://torimo.herokuapp.com/api/v1/trips/${id}`).then( resp => {
       console.log(resp.data.trip);
       Object.assign(this, resp.data.trip);
     } )
@@ -19,7 +19,33 @@ export default class Trip {
     this.title = null
     this.main_place = null
     this.budget = null
-    this.trip_course = null
+    this.trip_courses = null
+  }
+
+  get coursesGroupByDay() {
+    // let tripCourses = []
+    let groupedCourses = Object.values(this.groupBy(this.trip_courses, c => c.day_of_trip))
+    console.log(groupedCourses)
+    let tripCourses = groupedCourses.map((dayCourses) => {
+      let courses = []
+      dayCourses.forEach((course) => {
+        courses.push(course)
+        if (course.transportation_to_next) {courses.push(course.transportation_to_next)}
+      })
+      return courses
+      // tripCourses.push(courses)
+    })
+    console.log(tripCourses)
+    return tripCourses//this.groupBy(this.trip_courses, c => c.day_of_trip)
+  }
+
+  groupBy(array, getKey) {
+    if (!array) {return}
+    return array.reduce((obj, cur, idx, src) => {
+      const key = getKey(cur, idx, src);
+      (obj[key] || (obj[key] = [])).push(cur);
+      return obj;
+    }, {})
   }
 
   // toPostedObject(){
