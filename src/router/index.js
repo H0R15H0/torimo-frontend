@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Top from '../views/Top.vue'
 import ShowTrip from '../views/ShowTrip.vue'
+import CreateTrip from '../views/CreateTrip.vue'
 // import SearchTrips from '../views/SearchTrips'
 
 Vue.use(VueRouter)
