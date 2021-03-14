@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = frontend
+  url = https://github.com/H0R15H0/torimo-frontend.git
