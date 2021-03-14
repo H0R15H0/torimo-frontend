@@ -17,6 +17,10 @@ const routes = [
     component: ShowTrip
   },
   {
+    path: 'search_trips',
+    name: 'SearchTrip'
+  },
+  {
     path: '/trips/new',
     name: 'CreateTrip'
   },
