@@ -57,7 +57,7 @@
                   <v-divider vertical></v-divider>
                   <v-col cols="3" class="py-0">
                     <p>{{ trip.budget }}円</p>
-                    <p>{{ trip.transportation }}</p>
+                    <p>{{ trip.main_transportation }}</p>
                   </v-col>
                 </v-row>
               </v-container>

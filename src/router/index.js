@@ -17,15 +17,15 @@ const routes = [
     name: 'ShowTrip',
     component: ShowTrip
   },
-  {
-    path: '/search_trips',
-    name: 'SearchTrips',
-    component: SearchTrips,
-  },
-  {
-    path: '/trips/new',
-    name: 'CreateTrip'
-  },
+  // {
+  //   path: '/search_trips',
+  //   name: 'SearchTrips',
+  //   component: SearchTrips,
+  // },
+  // {
+  //   path: '/trips/new',
+  //   name: 'CreateTrip'
+  // },
 ]
 
 const router = new VueRouter({
