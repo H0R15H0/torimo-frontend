@@ -1,6 +1,5 @@
 # README
-vuetify
-vue-router
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6936a065-ed34-4784-9ef2-18552ea095f3/deploy-status)](https://app.netlify.com/sites/trimo/deploys)
 # Requirement
 Docker
 docker-compose
